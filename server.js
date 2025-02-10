@@ -82,7 +82,7 @@ app.post("/", async (req, res) => {
     apiKey: GROQ_API_KEY,
     model: GROQ_LLAMA_MODEL,
     // text,
-    text: `${text}를 바탕으로 맛집 추천에 어울리는 AI 이미지 생성을 위한 200자 이내의 영어 프롬프트를 작성해줘`,
+    text: `${text}를 바탕으로 ai와 하는 스터디에 어울리는 AI 이미지 생성을 위한 200자 이내의 영어 프롬프트를 작성해줘`,
   }).then((res) => res.choices[0].message.content);
   // 2-2. 그거에서 프롬프트만 JSON으로 추출
   // mixtral-8x7b-32768	(groq)
@@ -115,7 +115,7 @@ app.post("/", async (req, res) => {
     apiKey: GROQ_API_KEY,
     model: GROQ_LLAMA_MODEL,
     // text,
-    text: `${text}를 바탕으로 맛집 추천에 어울리는 설명 생성을 위한 200자 이내의 한글 프롬프트를 작성해줘`,
+    text: `${text}를 바탕으로 스터디에 어울리는 설명 생성을 위한 200자 이내의 한글 프롬프트를 작성해줘`,
   }).then((res) => res.choices[0].message.content);
   console.log(prompt2);
   // 3-2. 그거에서 프롬프트만 추출
